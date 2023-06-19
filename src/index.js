@@ -79,9 +79,27 @@ document.getElementById("middle-img").src = Object.values(
 )[2];
 
 //main content -- text content
-const txt = document.querySelector(".text-content h4");
+const txt = document.querySelectorAll(".text-content h4");
+const prg = document.querySelectorAll(".text-content p");
+const cArr = Object.values(siteContent["ana-içerik"]);
+const baslik = [];
+const pr = [];
 
-txt.innerHTML = Object.values(siteContent["ana-içerik"]);
+for (let i = 0; i < cArr.length; i++) {
+  if (cArr[i].length < 11) {
+    baslik.push(cArr[i]);
+  } else {
+    pr.push(cArr[i]);
+  }
+}
+
+for (let j = 0; j < txt.length; j++) {
+  txt[j].innerHTML = baslik[j];
+}
+
+for (let k = 0; k < prg.length; k++) {
+  prg[k].innerHTML = pr[k];
+}
 
 //section contact h4
 document.querySelector(".contact h4").innerHTML = Object.values(
