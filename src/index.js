@@ -50,7 +50,7 @@ console.log("Proje açıldı!");
 /* Kodlar Buradan aşağıya */
 
 // top nav ekle
-const nava = document.querySelectorAll(".container a");
+const nava = document.querySelectorAll(".container nav a");
 
 for (let i = 0; i < nava.length; i++) {
   nava[i].innerHTML = Object.values(siteContent.nav)[i];
